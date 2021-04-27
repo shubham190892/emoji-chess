@@ -2,11 +2,8 @@
   "name": "node-vode",
   "version": "1.0.0",
   "dependencies": {
-    "performance-now": "^2.1.0",
     "ramda": "^0.27.0",
     "rewire": "^5.0.0",
-    "htmlparser2": "^6.1.0",
-    "axios": "^0.21.1"
   },
   "devDependencies": {
     "jest": "^26.6.3",
