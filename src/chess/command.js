@@ -35,7 +35,7 @@ function move(cmd, game, tokens) {
 
 function calcGameStatus(cmd, game) {
   if (cmd.type === 1) {
-    switch (cmd) {
+    switch (cmd.tokens[0]) {
       case 'draw':
         return GS.DRAW_BY_AGREEMENT;
       case 'resign':
@@ -97,7 +97,7 @@ function parse(cmd) {
   command.type = tokens.length;
   command.tokens = tokens;
   if (tokens.length === 1) {
-    if (['resign', 'draw'].indexOf(tokens[0]) === -1) command.type = 0;
+    if (['resign', 'draw', 'time'].indexOf(tokens[0]) === -1) command.type = 0;
   } else if (tokens.length > 3) {
     return (command.type = 0);
   } else {
